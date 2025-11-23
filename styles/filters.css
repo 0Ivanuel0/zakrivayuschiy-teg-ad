@@ -1,0 +1,27 @@
+.filter-grayscale {
+  filter: grayscale(70%);
+}
+
+.filter-multiple {
+  filter: contrast(50%) hue-rotate(35deg) saturate(130%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(70deg);
+}
+
+.filter-saturate {
+  filter: saturate(250%);
+}
+
+.filter-invert {
+  filter: invert(100%);
+}
+
+.filter-sepia {
+  filter: sepia(90%);
+}
+
+.filter-blur {
+  filter: blur(5px);
+}

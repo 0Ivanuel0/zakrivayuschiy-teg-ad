@@ -1,16 +1,282 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
+/* 
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
 */
 
+@supports (text-stroke: 4px #fff) {
+  .card-label {
+    text-stroke: 4px #fff;
+  }
+} 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: var(--main-font-family, sans-serif);
+  font-weight: var(--main-font-regular, 400);
+  background-image: 
+    repeating-linear-gradient(to left, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+
+}
+
+.header {
+  inline-size: clamp(375px, 101.231vw - 8.615px, 700px);
+  block-size: clamp(327px, 4.413vw + 306.45px, 368px);
+  margin-block: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: white;
+  border: 2px solid #000;
+  font-family: var(--accent-font-family);
+  font-weight: 400;
+}
+
+.hero-title {
+  font-size: clamp(49px, 1.502vw + 43.366px, 65px);
+}
+
+.title-description {
+  font-size: clamp(14px, 0.845vw + 10.831px, 23px);
+  margin-top: 20px;
+}
+
+.cards-list {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.list-item {
+  inline-size: clamp(375px, 102.492vw - 13.346px, 700px);
+  block-size: min-content;
+  display: grid;
+
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+
+.card-title {
+  margin: 
+    clamp(5px, 0.623vw + 0.664px, 5px) 30px 
+    clamp(3px, 0.623vw + 0.664px, 5px) 10px;
+
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+
+  }
+
+.picture {
+  display: flex;
+  position: relative;
+  z-index: 0;
+  height: clamp(375px, 30.141vw + 262.022px, 696px);
+  border-block-end: 2px solid #000;
+}
+
+.card-image {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+
+}
+
+.card-label {
+  position: absolute;
+  z-index: 1;
+
+  inset-inline-end: clamp(13px, 3.738vw - 1.019px, 25px);
+  inset-block-start: 25px ;
+
+  font-family: var(--accent-font-family, "PressStart2P");
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000;
+
+  opacity: 0.7;
+  -webkit-text-stroke: 0.3px #fff;
+}
+
+.card-content {
+  padding: 25px 25px 24px 25px;
+  border-top: 2px solid #000;
+}
+
+.card-article
+{ 
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0%;
+
+}
+
+.card-text {
+  margin: 27px 0 25.3px 0;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0%;
+}
+
+.button-box {
+  justify-self: end;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__icon-button {
+  block-size: 38px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card__like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 130px;
+  block-size: 38px;
+  
+  border: 2px solid #000;
+}
+
+.save-button {
+  inline-size: clamp(310px, 18.487rem + 2.723vw, 380px);
+  block-size: auto;
+  
+  margin-top: 50px;
+  margin-bottom: 103px;
+  padding-block: 15px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+.save-button-image {
+  inline-size: clamp(21px, -0.657vw + 30.465px, 28px);
+}
+
+.save-button-text {
+  white-space: nowrap;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+} 
+
+.save-button-dialog{
+  padding: 30px clamp(30px, -1.127vw + 46.225px, 42px);
+  overflow: hidden;
+  
+  background-color: #fff;
+  border: 2px solid #000;
+  
+  font-family: var(--accent-font-family, "Press Start 2P");
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.dialog-content {
+  display: flex;
+  inline-size: clamp(257px, 3.38vw + 244.325px, 293px);
+  gap: 20px;
+}
+
+.save-button-dialog-image {
+  inline-size: 39px;
+  
+}
+
+.dialog-text {
+  width: 198px;
+}
+
+.ok-button {
+  inline-size: clamp(257px, 3.38vw + 244.325px, 293px);
+  block-size: 38px;
+  margin-top: 30px;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+  font-family: var(--accent-font-family, "Press Start 2P");
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  overflow: hidden;
+  color: #000; /* Исходный цвет */
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  
+  translate: -100%;
+  transition: translate 0.5s ease-in-out;
+  
+  background-color: var(--button-hover-bg-color, #000);
+}
+
+.button .button__text,
+.save-button-image {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference; /* Инвертирует цвет на черном*/
+  color: #fff; 
+}
+
+.button:hover::before {
+  translate: 0;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px #000;
+  transition: 0.3s ease;
+  outline: none;
+}
+
+@media (width > 375px) {
+  .card-content {
+    padding-top: 27px;
+  }
+
+  .save-button {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
