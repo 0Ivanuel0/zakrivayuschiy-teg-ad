@@ -1,79 +1,76 @@
 .like-icon .core {
-    fill: var(--core-color, transparent);
+  fill: var(--core-color, transparent);
 }
 
 .like-icon .main-body {
-    fill: var(--main-body-color, transparent);
+  fill: var(--main-body-color, transparent);
 }
 
 .like-icon .contour {
-    fill: var(--contour-color, #000);
+  fill: var(--contour-color, #000);
 }
 
 .like-icon .sparks {
-    opacity: 0;
+  opacity: 0;
 }
 
 .like-icon:hover .core {
-    --core-color: #000;
-    fill: var(--core-color, #000);
+  --core-color: #000;
+  fill: var(--core-color, #000);
 }
 
 .like-icon:hover .main-body {
-    --main-body-color: #000;
-    fill: var(--main-body-color, #000);
-    transition-delay:  0.08s;
+  --main-body-color: #000;
+  fill: var(--main-body-color, #000);
+  transition-delay: 0.08s;
 }
 
 .like-icon:active .core {
-    --core-color: #f00;
+  --core-color: #f00;
 }
 
 .like-icon:active .main-body {
-    --main-body-color: #f00;
+  --main-body-color: #f00;
 }
 
 .like-icon.is-liked .core {
-    --core-color: #f00;
+  --core-color: #f00;
 }
 
 .like-icon.is-liked .main-body {
-    --main-body-color: #f00;
-    
+  --main-body-color: #f00;
 }
 
 .like-icon.is-liked .contour {
-    --contour-color: #f00;
+  --contour-color: #f00;
 }
 
 .like-icon.is-liked .sparks {
-    animation: change-sparks-color 0.3s ease-in 0.3s;
+  animation: change-sparks-color 0.3s ease-in 0.3s;
 }
 
 .like-icon.is-liked .heart {
-    transform-origin: center;
-    animation: heart-scaling 0.2s ease-in 0.1s;
+  transform-origin: center;
+  animation: heart-scaling 0.2s ease-in 0.1s;
 }
 
 @keyframes change-sparks-color {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        fill: var(--sparks-color, #f00);
-        opacity: 1;
-    }
+  100% {
+    fill: var(--sparks-color, #f00);
+    opacity: 1;
+  }
 }
 
 @keyframes heart-scaling {
-    0% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
 
-    100% {
-        transform: scale(1.25);
-    }
+  100% {
+    transform: scale(1.25);
+  }
 }
-
-

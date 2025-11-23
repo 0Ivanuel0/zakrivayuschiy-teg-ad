@@ -1,12 +1,9 @@
-/* 
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-*/
-
 @supports (text-stroke: 4px #fff) {
   .card-label {
     text-stroke: 4px #fff;
   }
-} 
+}
+
 .page {
   min-inline-size: 375px;
   max-inline-size: 1440px;
@@ -16,12 +13,14 @@
   align-items: center;
 
   font-family: var(--main-font-family, sans-serif);
-  font-weight: var(--main-font-regular, 400);
-  background-image: 
-    repeating-linear-gradient(to left, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+  font-variation-settings: "wght" var(--main-font-regular, 400);
+  background-image: repeating-linear-gradient(
+      to left,
+      #d3d3d3 0 2px,
+      #d3d3d300 2px 4px
+    ),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-
 }
 
 .header {
@@ -33,7 +32,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   background-color: white;
   border: 2px solid #000;
   font-family: var(--accent-font-family);
@@ -65,10 +64,8 @@
   background-color: #fff;
 }
 
-
 .card-title {
-  margin: 
-    clamp(5px, 0.623vw + 0.664px, 5px) 30px 
+  margin: clamp(5px, 0.623vw + 0.664px, 5px) 30px
     clamp(3px, 0.623vw + 0.664px, 5px) 10px;
 
   font-weight: 700;
@@ -76,8 +73,7 @@
   font-size: 18px;
   line-height: 120%;
   letter-spacing: 0%;
-
-  }
+}
 
 .picture {
   display: flex;
@@ -91,7 +87,6 @@
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
-
 }
 
 .card-label {
@@ -99,7 +94,7 @@
   z-index: 1;
 
   inset-inline-end: clamp(13px, 3.738vw - 1.019px, 25px);
-  inset-block-start: 25px ;
+  inset-block-start: 25px;
 
   font-family: var(--accent-font-family, "PressStart2P");
   font-size: 14px;
@@ -116,12 +111,10 @@
   border-top: 2px solid #000;
 }
 
-.card-article
-{ 
+.card-article {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0%;
-
 }
 
 .card-text {
@@ -155,24 +148,24 @@
   align-items: center;
   inline-size: 130px;
   block-size: 38px;
-  
+
   border: 2px solid #000;
 }
 
 .save-button {
   inline-size: clamp(310px, 18.487rem + 2.723vw, 380px);
   block-size: auto;
-  
+
   margin-top: 50px;
   margin-bottom: 103px;
   padding-block: 15px;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 9px;
-  
+
   border: 2px solid #000;
   background-color: #fff;
 }
@@ -187,15 +180,15 @@
 
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
-} 
+}
 
-.save-button-dialog{
+.save-button-dialog {
   padding: 30px clamp(30px, -1.127vw + 46.225px, 42px);
   overflow: hidden;
-  
+
   background-color: #fff;
   border: 2px solid #000;
-  
+
   font-family: var(--accent-font-family, "Press Start 2P");
   font-size: 14px;
   line-height: 150%;
@@ -210,7 +203,6 @@ dialog::backdrop {
 
 .save-button-dialog-image {
   inline-size: 39px;
-  
 }
 
 .dialog-text {
@@ -244,10 +236,10 @@ dialog::backdrop {
   left: 0;
   inline-size: 100%;
   block-size: 100%;
-  
+
   translate: -100%;
   transition: translate 0.5s ease-in-out;
-  
+
   background-color: var(--button-hover-bg-color, #000);
 }
 
@@ -256,7 +248,7 @@ dialog::backdrop {
   position: relative;
   z-index: 2;
   mix-blend-mode: difference; /* Инвертирует цвет на черном*/
-  color: #fff; 
+  color: #fff;
 }
 
 .button:hover::before {
