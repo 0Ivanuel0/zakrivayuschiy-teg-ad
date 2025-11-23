@@ -282,7 +282,7 @@
     <button
       class="save-button button"
       type="button"
-      onclick="window['dialog-id'].showModal();"
+      onclick="event.preventDefault(); window['dialog-id'].showModal();"
       aria-controls="dialog-id">
       <svg class="save-button-image" viewBox="0 0 28 28">
         <use href="./svg/floppy.svg"></use>
@@ -297,7 +297,7 @@
       <button 
         class="ok-button button"
         type="button" 
-        onclick="window['dialog-id'].close()">
+        onclick="event.preventDefault(); window['dialog-id'].close()">
         <span class="button__text">ОK</span>
       </button>
     </dialog>
